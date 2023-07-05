@@ -1,15 +1,23 @@
 import Link from "next/link";
 import React from "react";
-
+import { IconType } from "react-icons";
 import { twMerge } from "tailwind-merge";
 
 type Props = {
+  icon?: IconType;
+  size?: number;
   label: string;
   path: string;
-  active: boolean;
+  active?: boolean;
 };
 
-export default function HeaderItem({ label, path, active }: Props) {
+export default function HeaderItem({
+  icon: Icon,
+  size,
+  label,
+  path,
+  active,
+}: Props) {
   return (
     <Link
       href={path}
@@ -18,7 +26,11 @@ export default function HeaderItem({ label, path, active }: Props) {
         active && "text-neutral-700"
       )}
     >
-      <p className="w-full truncate">{label}</p>
+      {Icon ? (
+        <Icon className="transition hover:scale-90" size={size ?? 32} />
+      ) : (
+        <p className="w-full truncate">{label}</p>
+      )}
     </Link>
   );
 }
