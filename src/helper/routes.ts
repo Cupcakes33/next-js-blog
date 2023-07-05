@@ -4,12 +4,12 @@ const ROUTES = [
     path: "/",
   },
   {
-    label: "About",
-    path: "/about",
-  },
-  {
     label: "Posts",
     path: "/posts",
+  },
+  {
+    label: "About",
+    path: "/about",
   },
 ];
 

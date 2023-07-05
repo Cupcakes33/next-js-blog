@@ -1,6 +1,13 @@
-export default function Home() {
-  return <main className="relative">
-    <h1>Home</h1>
+import Intro from "@/components/Intro";
+import Profile from "@/components/Profile";
 
-  </main>;
+export default function Home() {
+  return (
+    <main className="relative">
+      <Intro/>
+      <div className="flex items-center justify-center w-full">
+        <Profile />
+      </div>
+    </main>
+  );
 }
