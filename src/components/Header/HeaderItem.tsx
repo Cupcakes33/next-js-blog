@@ -1,16 +1,15 @@
 import Link from "next/link";
 import React from "react";
-import { IconType } from "react-icons";
+
 import { twMerge } from "tailwind-merge";
 
 type Props = {
-  icon: IconType | null;
   label: string;
   path: string;
   active: boolean;
 };
 
-export default function HeaderItem({ icon: Icon, label, path, active }: Props) {
+export default function HeaderItem({ label, path, active }: Props) {
   return (
     <Link
       href={path}
@@ -19,7 +18,6 @@ export default function HeaderItem({ icon: Icon, label, path, active }: Props) {
         active && "text-neutral-700"
       )}
     >
-      {Icon && <Icon size={26} />}
       <p className="w-full truncate">{label}</p>
     </Link>
   );
