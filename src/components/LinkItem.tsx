@@ -9,28 +9,41 @@ type Props = {
   label: string;
   path: string;
   active?: boolean;
+  isExternal?: boolean;
 };
 
-export default function HeaderItem({
+export default function LinkItem({
   icon: Icon,
   size,
   label,
   path,
   active,
+  isExternal,
 }: Props) {
   return (
-    <Link
-      href={path}
+    <span
       className={twMerge(
         `text-md font-medium cursor-pointer hover:text-neutral-700 transition text-neutral-400 py-1`,
         active && "text-neutral-700"
       )}
     >
-      {Icon ? (
-        <Icon className="transition hover:scale-90" size={size ?? 32} />
+      {isExternal ? (
+        <a href={path} target="_blank" rel="noopener noreferrer">
+          {Icon ? (
+            <Icon className="transition hover:scale-90" size={size ?? 32} />
+          ) : (
+            <p className="w-full truncate">{label}</p>
+          )}
+        </a>
       ) : (
-        <p className="w-full truncate">{label}</p>
+        <Link href={path}>
+          {Icon ? (
+            <Icon className="transition hover:scale-90" size={size ?? 32} />
+          ) : (
+            <p className="w-full truncate">{label}</p>
+          )}
+        </Link>
       )}
-    </Link>
+    </span>
   );
 }

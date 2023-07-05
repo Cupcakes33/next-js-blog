@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="flex flex-col items-end space-y-1">
         <div className="flex space-x-2">
           {ABOUTS.map((about) => (
-            <LinkItem key={about.label} size={22} {...about} />
+            <LinkItem key={about.label} size={22} {...about} isExternal />
           ))}
         </div>
         <p>© 2023 Universe Blog. Powered by Next.js, Hosted on Vercel</p>
