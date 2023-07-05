@@ -1,11 +1,22 @@
+import { getAllPosts } from "@/service/post";
+import Link from "next/link";
 import React from "react";
 
-export default function FeaturedPosts() {
+export default async function FeaturedPosts() {
+  const posts = await getAllPosts();
   return (
     <section className="mt-16">
       <h1 className="mb-6 text-3xl font-bold text-neutral-700">
         Featured Posts
       </h1>
+
+      <ul>
+        {posts.map((post, i) => (
+          <li key={i}>
+            <Link href={post.slug}>{post.slug}</Link>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
