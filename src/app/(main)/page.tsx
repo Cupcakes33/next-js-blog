@@ -1,3 +1,6 @@
 export default function Home() {
-  return <>afwe</>;
+  return <main className="relative">
+    <h1>Home</h1>
+
+  </main>;
 }

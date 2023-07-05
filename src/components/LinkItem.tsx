@@ -30,7 +30,7 @@ export default function LinkItem({
       {isExternal ? (
         <a href={path} target="_blank" rel="noopener noreferrer">
           {Icon ? (
-            <Icon className="transition hover:scale-90" size={size ?? 32} />
+            <Icon className="hover:scale-90" size={size ?? 32} />
           ) : (
             <p className="w-full truncate">{label}</p>
           )}
@@ -38,7 +38,7 @@ export default function LinkItem({
       ) : (
         <Link href={path}>
           {Icon ? (
-            <Icon className="transition hover:scale-90" size={size ?? 32} />
+            <Icon className="hover:scale-90" size={size ?? 32} />
           ) : (
             <p className="w-full truncate">{label}</p>
           )}
