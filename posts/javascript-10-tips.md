@@ -1,3 +1,15 @@
+---
+title: '둘'
+description: '둘이에요'
+icon: ''
+image: ''
+category:
+  - 
+featured: false
+date: 2023-07-06 21:40:49
+---
+
+
 ## What you should already know
 
 This guide assumes you have the following basic background:

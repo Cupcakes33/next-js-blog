@@ -4,6 +4,7 @@ import React from "react";
 
 export default async function FeaturedPosts() {
   const posts = await getAllPosts();
+  console.log(posts);
 
   return (
     <section className="mt-16">
