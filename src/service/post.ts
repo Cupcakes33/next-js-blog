@@ -11,7 +11,6 @@ const POSTS_PATH = path.join(process.cwd(), BASE_PATH);
 type PostMatter = {
   title: string;
   description: string;
-  icon: string;
   image: string;
   category: string[];
   featured: boolean;
@@ -20,25 +19,21 @@ type PostMatter = {
 
 type Post = PostMatter & {
   slug: string;
-  // content: string;
+  content: string;
   readingTime: number;
 };
 
-const parsePost = (postPath: string): Post | undefined => {
-  try {
-    const file = fs.readFileSync(postPath, "utf8");
-    const { data, content } = matter(file);
-    const grayMatter = data as PostMatter;
-    return {
-      ...grayMatter,
-      date: dayjs(grayMatter.date).format("YYYY-MM-DD"),
-      slug: postPath.slice(postPath.indexOf(BASE_PATH)).replace(".md", ""),
-      readingTime: Math.ceil(readingTime(content).minutes),
-      // content,
-    };
-  } catch (error) {
-    console.error(error);
-  }
+const parsePost = (postPath: string): Post => {
+  const file = fs.readFileSync(postPath, "utf8");
+  const { data, content } = matter(file);
+  const grayMatter = data as PostMatter;
+  return {
+    ...grayMatter,
+    date: dayjs(grayMatter.date).format("YYYY-MM-DD"),
+    slug: postPath.slice(postPath.indexOf(BASE_PATH)).replace(".md", ""),
+    readingTime: Math.ceil(readingTime(content).minutes),
+    content,
+  };
 };
 
 export const getAllPosts = async () => {
@@ -46,4 +41,9 @@ export const getAllPosts = async () => {
   return postPaths.map((path) => {
     return parsePost(path);
   });
+};
+
+export const getFeaturedPosts = async () => {
+  const allPosts = await getAllPosts();
+  return allPosts.filter((post) => post.featured);
 };

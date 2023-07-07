@@ -1,10 +1,10 @@
-import { getAllPosts } from "@/service/post";
+import { getAllPosts, getFeaturedPosts } from "@/service/post";
 import Link from "next/link";
 import React from "react";
 
 export default async function FeaturedPosts() {
-  const posts = await getAllPosts();
-  console.log(posts);
+  // const posts = await getAllPosts();
+  const posts = await getFeaturedPosts();
 
   return (
     <section className="mt-16">
