@@ -47,3 +47,18 @@ export const getFeaturedPosts = async () => {
   const allPosts = await getAllPosts();
   return allPosts.filter((post) => post.featured);
 };
+
+export const getAllCategories = async () => {
+  const allPosts = await getAllPosts();
+  const categories = new Set();
+  
+  allPosts.forEach((post) => {
+    if (post.category[0] !== null) {
+      post.category[0].split(",").forEach((category) => {
+        categories.add(category.trim());
+      });
+    }
+  });
+
+  return [...categories];
+};

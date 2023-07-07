@@ -3,7 +3,7 @@ title: '둘'
 description: '둘이에요'
 image: 'https://images.unsplash.com/photo-1688590361364-2d153dac2a15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60'
 category:
-  - 
+  - javascript, react
 featured: false
 date: 2023-07-06 21:40:49
 ---
