@@ -1,3 +1,13 @@
+---
+title: '여섯'
+description: '여섯이에용'
+image: 'https://images.unsplash.com/photo-1688292667451-3a8945737a72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
+category:
+  - 
+featured: false
+date: 2023-07-07 15:18:26
+---
+
 ## What is Concurrent React?
 
 > The most important addition in React 18 is something we hope you never have to think about: concurrency. We think this is largely true for application developers, though the story may be a bit more complicated for library maintainers.

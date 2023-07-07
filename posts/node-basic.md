@@ -1,8 +1,7 @@
 ---
 title: '넷'
 description: '넷이에용'
-icon: ''
-image: ''
+image: 'https://plus.unsplash.com/premium_photo-1674568674849-46cfddccfdb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
 category:
   - 
 featured: false
