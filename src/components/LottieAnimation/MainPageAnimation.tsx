@@ -2,11 +2,14 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 
 const MainPageAnimation = () => {
-  const style = {
-    width: "500px",
-    height: "500px",
-  };
-  return <Player loop src="/lotties/main_logo.json" style={style} autoplay />;
+  return (
+    <Player
+      loop
+      src="/lotties/main_logo.json"
+      style={{ width: 600, height: 600 }}
+      autoplay
+    />
+  );
 };
 
 export default MainPageAnimation;
