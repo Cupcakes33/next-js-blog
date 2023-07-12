@@ -1,7 +1,7 @@
 const ROUTES = [
   {
     label: "Blog",
-    path: "/",
+    path: "/blog",
   },
   {
     label: "Posts",

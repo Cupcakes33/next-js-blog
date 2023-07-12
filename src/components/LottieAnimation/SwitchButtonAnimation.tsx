@@ -9,25 +9,25 @@ const SwtichButtonAnimation = () => {
 
   const handleSwitch = () => {
     const player = lottieRef.current;
-    console.log(player);
+
     if (player) {
       if (isPlaying) {
         player.playSegments([player.totalFrames, 0], true);
         setIsPlaying(false);
       } else {
         player.playSegments([0, player.totalFrames], true);
-
         setIsPlaying(true);
       }
     }
   };
   const style = {
     width: "50px",
-    height: "50px",
+    height: "30px",
   };
   return (
-    <div>
+    <span className="cursor-pointer " onClick={handleSwitch}>
       <Player
+        speed={3}
         autoplay={false}
         loop={false}
         controls={false}
@@ -37,10 +37,8 @@ const SwtichButtonAnimation = () => {
         }}
         src="/lotties/switch_button.json"
         style={style}
-        
       />
-      <button onClick={handleSwitch}>Switch</button>
-    </div>
+    </span>
   );
 };
 
