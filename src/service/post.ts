@@ -12,12 +12,12 @@ type PostMatter = {
   title: string;
   description: string;
   image: string;
-  category: string[];
+  tag: string[];
   featured: boolean;
   date: string;
 };
 
-type Post = PostMatter & {
+export type Post = PostMatter & {
   slug: string;
   content: string;
   readingTime: number;
@@ -29,7 +29,7 @@ const parsePost = (postPath: string): Post => {
   const grayMatter = data as PostMatter;
   return {
     ...grayMatter,
-    date: dayjs(grayMatter.date).format("YYYY-MM-DD"),
+    date: dayjs(grayMatter.date).format("YY.MM.DD"),
     slug: postPath.slice(postPath.indexOf(BASE_PATH)).replace(".md", ""),
     readingTime: Math.ceil(readingTime(content).minutes),
     content,
@@ -48,17 +48,17 @@ export const getFeaturedPosts = async () => {
   return allPosts.filter((post) => post.featured);
 };
 
-export const getAllCategories = async () => {
-  const allPosts = await getAllPosts();
-  const categories = new Set();
-  
-  allPosts.forEach((post) => {
-    if (post.category[0] !== null) {
-      post.category[0].split(",").forEach((category) => {
-        categories.add(category.trim());
-      });
-    }
-  });
+// export const getAllTags = async (): Promise<string[]> => {
+//   const allPosts = await getAllPosts();
+//   const tags = new Set<string>();
 
-  return [...categories];
-};
+//   allPosts.forEach((post) => {
+//     if (post.tag[0] !== null) {
+//       post.tag[0].split(",").forEach((tag) => {
+//         tags.add(tag.trim());
+//       });
+//     }
+//   });
+
+//   return [...tags];
+// };

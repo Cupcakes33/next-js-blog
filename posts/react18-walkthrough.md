@@ -1,9 +1,9 @@
 ---
-title: '여섯'
-description: '여섯이에용'
-image: 'https://images.unsplash.com/photo-1688292667451-3a8945737a72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
-category:
-  - 
+title: "여섯"
+description: "여섯이에용"
+image: "https://images.unsplash.com/photo-1688292667451-3a8945737a72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+tag:
+  - post
 featured: false
 date: 2023-07-07 15:18:26
 ---
