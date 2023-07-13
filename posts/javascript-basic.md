@@ -2,8 +2,9 @@
 title: "셋"
 description: "셋이에요"
 image: "https://images.unsplash.com/photo-1688507780318-bff0debfbca2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-category:
-  - next.js, typescript
+tag:
+  - typescript
+  - next.js
 featured: false
 date: 2023-07-06 21:41:00
 ---

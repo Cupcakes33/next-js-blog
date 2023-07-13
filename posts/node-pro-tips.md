@@ -2,8 +2,9 @@
 title: '다섯'
 description: '다섯이에용'
 image: 'https://images.unsplash.com/photo-1687383876768-04a1505ffcdf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxNXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
-category:
-  - 
+tag:
+  - javascript
+  - tailwind
 featured: false
 date: 2023-07-07 15:18:03
 ---
